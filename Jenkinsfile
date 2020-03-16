@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    SVC_ACCOUNT_KEY = credentials('NicGCPINFRA')
+    SVC_ACCOUNT_KEY = credentials('artem_dev')
   }
 
   stages {
