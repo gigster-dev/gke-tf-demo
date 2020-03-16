@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    SVC_ACCOUNT_KEY = credentials('GOOGLE_APPLICATION_DEVOPSPATTERNS_CREDENTIALS')
+    SVC_ACCOUNT_KEY = credentials('nicGCP')
   }
 
   stages {
