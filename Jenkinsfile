@@ -11,16 +11,16 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scm
-        sh 'mkdir -p creds' 
-//      sh 'echo $SVC_ACCOUNT_KEY | /usr/bin/base64 -d > ./creds/serviceaccount.json'
+        sh "mkdir -p creds" 
+        sh "echo $SVC_ACCOUNT_KEY | /usr/bin/base64 -d > ./creds/serviceaccount.json"
       }
     }
 
     stage('TF Plan') {
       steps {
         container('terraform') {
-          sh 'terraform init'
-          sh 'terraform plan -out myplan'
+          sh "terraform init"
+          sh "terraform plan -out myplan"
         }
       }      
     }
